@@ -1,0 +1,12 @@
+[
+    {"id":"0","name": "Pomme", "price": 9.50,"color":"Vert"},
+    {"id":"1","name": "Poire", "price": 8.50,"color":"Vert"},
+    {"id":"2","name": "Banane", "price": 7.50,"color":"Jaune"},
+    {"id":"3","name": "Orange", "price": 6.50,"color":"Orange"},
+    {"id":"4","name": "Fraise", "price": 5.50,"color":"Rouge"},
+    {"id":"5","name": "Pêche", "price": 4.50,"color":"Orange"},
+    {"id":"6","name": "Mangue", "price": 3.50,"color":"Vert"},
+    {"id":"7","name": "Kiwi", "price": 2.50,"color":"Brun"},
+    {"id":"8","name": "Ananas", "price": 1.50,"color":"JAune"},
+    {"id":"9","name": "Cerise", "price": 0.50,"color":"Rouge"}
+]

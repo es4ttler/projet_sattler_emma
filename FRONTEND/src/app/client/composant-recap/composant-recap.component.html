@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-title>Récapitulatif du formulaire</mat-card-title>
+    <mat-card-content>
+        <mat-label *ngIf="client.name">Nom : {{client.name}}</mat-label><br>
+        <mat-label *ngIf="client.firstname">Prénom : {{client.firstname}}</mat-label><br>
+        <mat-label *ngIf="client.civility">Civilité : {{client.civility}}</mat-label><br>
+        <mat-label *ngIf="client.email">Email : {{client.email}}</mat-label><br>
+        <mat-label *ngIf="client.tel">Téléphone : {{client.tel| phoneFormat}}</mat-label><br>
+        <mat-label *ngIf="client.address">Adresse : {{ client.address }}</mat-label><br>
+        <mat-label *ngIf="client.city">Ville : {{ client.city }}</mat-label><br>
+        <mat-label *ngIf="client.cp">Code postal : {{ client.cp }}</mat-label><br>
+        <mat-label *ngIf="client.country">Pays : {{client.country}}</mat-label><br>
+        <mat-label *ngIf="client.login">Identifiant : {{client.login}}</mat-label><br>
+        <mat-label *ngIf="client.password">Mot de passe : {{client.password}}</mat-label><br>
+        <mat-label *ngIf="client.passwordConfirm">Confirmation mot de passe : {{client.passwordConfirm}}</mat-label>
+    </mat-card-content>
+</mat-card>

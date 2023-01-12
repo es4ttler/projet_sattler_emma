@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-title>Catalogue</mat-card-title>
+    <app-composant-searchbar 
+        filterOn="name"
+        [catalog]="catalog" 
+        (filter)="updateCatalog($event)" 
+        (filterReset)="getCatalog()">
+    </app-composant-searchbar>
+    <div *ngFor="let fruit of catalog" class="flex-container">
+        <mat-card class="flex-item">
+            <mat-card-title>{{fruit.name}}</mat-card-title>
+            <mat-card-content>
+                <button [routerLink]="['/catalog',fruit.id]" class="button" mat-raised-button   color="primary">
+                    <mat-icon class="material-symbols-outlined" fontIcon="info"></mat-icon>
+                </button>
+                <button class="button" mat-raised-button  (click)="addFruit(fruit)" color="primary">Ajouter</button>
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-footer style="padding-left:1rem">
+                Prix : {{fruit.price}} €
+            </mat-card-footer>
+        </mat-card>
+    </div>
+</mat-card>

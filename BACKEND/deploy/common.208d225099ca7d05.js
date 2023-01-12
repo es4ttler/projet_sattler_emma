@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkApplicationTP02=self.webpackChunkApplicationTP02||[]).push([[592],{432:(p,r,e)=>{e.d(r,{s:()=>i});var c=e(2340),t=e(4650);let i=(()=>{class n{constructor(){this.apiUrl=c.N.api}}return n.\u0275fac=function(a){return new(a||n)},n.\u0275prov=t.Yz7({token:n,factory:n.\u0275fac,providedIn:"root"}),n})()}}]);

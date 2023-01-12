@@ -1,0 +1,24 @@
+<div class="center">
+    <h1>Connexion</h1>
+    <div>
+        <mat-card>
+            <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <p>
+                <mat-form-field appearance="fill">
+                    <input matInput formControlName="login">
+                    <mat-label>Login</mat-label>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Mot de passe</mat-label>
+                    <input matInput type="password" formControlName="password" required>
+                </mat-form-field>
+            </p>
+
+            <button mat-flat-button color="primary" type="submit">Connexion</button>
+            <button mat-flat-button color="secondary" [routerLink]="['/client','form']" type="submit" required>S'inscrire</button>
+            </form>
+        </mat-card>
+    </div>
+</div>

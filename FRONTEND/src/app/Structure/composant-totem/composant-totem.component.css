@@ -1,0 +1,14 @@
+mat-card{
+    margin-bottom: 10px;
+    height:25px;
+
+}
+
+.mat-drawer-container{
+    margin-bottom: 70px;
+}
+
+.icons{
+    position: absolute;
+    right: 1rem;
+}

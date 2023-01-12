@@ -1,0 +1,8 @@
+<span class="icons">
+    <button [routerLink]="['/client','login']" mat-icon-button class="example-icon">
+      <mat-icon>logout</mat-icon>
+    </button>
+    <button  class="" mat-icon-button [routerLink]="['/catalog','kart']">
+      <mat-icon matBadge="{{numberProduct$ | async}}" matBadgeColor="warn" class="material-symbols-outlined" fontIcon="shopping_cart"></mat-icon>
+    </button>
+</span>

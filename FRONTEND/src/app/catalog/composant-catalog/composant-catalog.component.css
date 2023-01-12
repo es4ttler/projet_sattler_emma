@@ -1,0 +1,15 @@
+.mat-card{
+  margin-bottom: 10pt;
+  margin-top: 10pt;
+  }
+  .flex-container {
+    display: flex;
+    /* flex-direction: wrap; */
+  }
+  
+  .flex-container > .flex-item {
+    flex: 1 1 auto;
+  }
+  .button{
+    margin-right: 10px;
+  }

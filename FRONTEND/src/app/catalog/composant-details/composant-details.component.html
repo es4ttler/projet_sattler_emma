@@ -1,0 +1,16 @@
+<div class="main-content" *ngIf="fruit">
+    <mat-card>
+        <mat-card-title>{{fruit.name}}</mat-card-title>
+        <mat-card-content>
+            <mat-chip-list>
+                <mat-chip>{{ fruit.color}}</mat-chip>
+            </mat-chip-list>
+            <div class="content">
+                <p>{{fruit.price}} €</p>
+                <button mat-flat-button color="primary" (click)="ajouterPanier(fruit)">
+                    Ajouter au panier
+                </button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

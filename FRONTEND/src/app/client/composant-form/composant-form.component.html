@@ -1,0 +1,116 @@
+<form>
+    <div>
+        <mat-card>
+            <mat-card-title>Identité</mat-card-title>
+            <table>
+                <tr>
+                    <td>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Civilité</mat-label>
+                            <mat-select [(ngModel)]="client.civility" name="civility" required>
+                                <mat-option value="Monsieur">Monsieur</mat-option>
+                                <mat-option value="Madame">Madame</mat-option>
+                                <mat-option value="Autre">Autre</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Nom</mat-label>
+                            <input appVerifyKeypress [(ngModel)]="client.name" matInput  name="name" pattern="[A-Za-z]{0,20}"required>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Prénom</mat-label>
+                            <input appVerifyKeypress [(ngModel)]="client.firstname" matInput  name="firstname" pattern="[A-Za-z]{0,20}" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Email</mat-label>
+                            <input type="email" [(ngModel)]="client.email" matInput name="email" pattern="[A-Za-z0-9]{0,20}@[A-Za-z0-9]{0,20}.[A-Za-z]{0,3}" required>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Téléphone</mat-label>
+                            <input appVerifyNumber size=8 type="tel" [(ngModel)]="client.tel" matInput name="tel" pattern="[0-9]{8}" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+        </mat-card>
+    </div>
+
+    <div>
+
+    </div>
+
+    <div>
+        <mat-card>
+            <mat-card-title id="E" >Localité</mat-card-title>
+            <table>
+                <tr>
+                    <td>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Adresse</mat-label>
+                            <input [(ngModel)]="client.address" matInput name="address" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Ville</mat-label>
+                            <input appVerifyKeypress [(ngModel)]="client.city" matInput name="city" pattern="[A-Za-z]{0,50}" required>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Code postal</mat-label>
+                            <input appVerifyNumber size=5 matInput [(ngModel)]="client.cp"  maxlength="5" name="cp" pattern="[0-9]{5}"required>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field appearance="standard">
+                            <mat-label>Pays</mat-label>
+                            <input appVerifyKeypress [(ngModel)]="client.country" matInput name="country" pattern="[A-Za-z]{0,50}" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+        </mat-card>
+    </div>
+    <div>
+        <mat-card>
+            <mat-card-title appVerifyDirective>Connexion</mat-card-title>
+            <p>
+                <mat-form-field appearance="standard">
+                    <mat-label>Login</mat-label>
+                    <input [(ngModel)]="client.login" matInput name="login" pattern="[A-Za-z]{0,50}" required>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="standard">
+                    <mat-label>Mot de passe</mat-label>
+                    <input type="password" [(ngModel)]="client.password" matInput name="password" required>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="standard">
+                    <mat-label>Confirmer mot de passe</mat-label>
+                    <input type="password" [(ngModel)]="client.passwordConfirm" matInput name="passwordConfirm" onchange="verifyFormData()" required>
+                </mat-form-field>
+            </p>
+        </mat-card>
+    </div>
+    <button type="submit" mat-raised-button>Envoyer</button>
+</form>
+
+<div *ngIf="isValid" class="main-content">
+    <app-composant-recap [client]="client"></app-composant-recap>
+    <button mat-raised-button color="primary" (click)="verifyFormData()">Retour</button>
+</div>

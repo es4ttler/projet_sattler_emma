@@ -1,0 +1,6 @@
+{ "/api":
+
+{ "target": "https://sattler-emma.onrender.com/",
+"secure": false }
+
+}
